@@ -21,9 +21,9 @@ def main():
                 processor.set_base_alcohol(row, json_outer_data)
                 processor.set_skill(row, json_outer_data)              
                 processor.set_glass(row, json_outer_data)              
-                processor.set_ingredient_info(row, json_outer_data)
-                
+                processor.set_ingredient_info(row, json_outer_data)                
                 processor.set_steps(row, json_outer_data)
+                
                 json_list.append(json_outer_data)
                 
             processor.DB.recipes.insert_many(json_list) 
